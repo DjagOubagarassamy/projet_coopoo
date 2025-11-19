@@ -15,13 +15,13 @@ public abstract class Personne {
     }
 
     // Constructeur 2 : COPIE (Pour le changement de classe)
-    public Personne(Personne p) {
-        this.nom = p.nom;
-        this.x = p.x;
-        this.y = p.y;
-        this.vie = p.vie;
-        this.direction = p.direction;
-    }
+    // public Personne(Personne p) {
+    //     this.nom = p.nom;
+    //     this.x = p.x;
+    //     this.y = p.y;
+    //     this.vie = p.vie;
+    //     this.direction = p.direction;
+    // }
 
     // NOUVELLE MÉTHODE DE DÉPLACEMENT
     // 1: Gauche | 2: Droite | 3: Bas | 4: Haut
