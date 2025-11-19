@@ -34,3 +34,4 @@ public abstract class Personne {
     // Méthode pour attaquer (sera utilisée avec les Armes plus tard)
     public abstract void attaquer(); 
 }
+
