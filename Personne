@@ -1,15 +1,16 @@
 public abstract class Personne {
     protected String nom;
-    protected int pv;
     protected int x; 
     protected int y; 
+    protected int Direction;
+    protected Boolean VIE;
 
     // Constructeur 1 : Pour créer le Paysan au début du jeu
-    public Personne(String nom, int x, int y, int pv) {
+    public Personne(String nom, int x, int y) {
         this.nom = nom;
         this.x = x;
         this.y = y;
-        this.pv = pv;
+
     }
 
     // Constructeur 2 : COPIE (Pour transformer un Paysan en Chevalier, etc.)
@@ -17,7 +18,6 @@ public abstract class Personne {
         this.nom = p.nom;
         this.x = p.x;
         this.y = p.y;
-        this.pv = p.pv; // On garde les PV actuels (ou on les soigne, au choix)
     }
 
     // Méthodes
@@ -28,7 +28,7 @@ public abstract class Personne {
     }
 
     public String getInfos() {
-        return nom + " (" + getClass().getSimpleName() + ") | PV:" + pv + " | Pos:[" + x + "," + y + "]";
+        return nom + " (" + getClass().getSimpleName() + ") | Pos:[" + x + "," + y + "]";
     }
 
     // Méthode pour attaquer (sera utilisée avec les Armes plus tard)
