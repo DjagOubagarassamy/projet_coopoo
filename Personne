@@ -23,7 +23,7 @@ public abstract class Personne {
     //     this.direction = p.direction;
     // }
 
-    // NOUVELLE MÉTHODE DE DÉPLACEMENT
+    // MÉTHODE DE DÉPLACEMENT
     // 1: Gauche | 2: Droite | 3: Bas | 4: Haut
     public void seDeplacer(int choixDirection) {
         this.direction = choixDirection; // On mémorise la direction
