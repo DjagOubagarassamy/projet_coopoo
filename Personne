@@ -1,0 +1,36 @@
+public abstract class Personne {
+    protected String nom;
+    protected int pv;
+    protected int x; 
+    protected int y; 
+
+    // Constructeur 1 : Pour créer le Paysan au début du jeu
+    public Personne(String nom, int x, int y, int pv) {
+        this.nom = nom;
+        this.x = x;
+        this.y = y;
+        this.pv = pv;
+    }
+
+    // Constructeur 2 : COPIE (Pour transformer un Paysan en Chevalier, etc.)
+    public Personne(Personne p) {
+        this.nom = p.nom;
+        this.x = p.x;
+        this.y = p.y;
+        this.pv = p.pv; // On garde les PV actuels (ou on les soigne, au choix)
+    }
+
+    // Méthodes
+    public void seDeplacer(int newX, int newY) {
+        this.x = newX;
+        this.y = newY;
+        System.out.println(this.nom + " va en [" + x + "," + y + "]");
+    }
+
+    public String getInfos() {
+        return nom + " (" + getClass().getSimpleName() + ") | PV:" + pv + " | Pos:[" + x + "," + y + "]";
+    }
+
+    // Méthode pour attaquer (sera utilisée avec les Armes plus tard)
+    public abstract void attaquer(); 
+}
