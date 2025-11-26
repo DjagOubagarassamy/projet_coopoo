@@ -1,32 +1,20 @@
 public abstract class Personne {
     protected String nom;
     protected int x; 
-    protected int y; 
-    //protected int direction; // 1:Gauche, 2:Droite, 3:Bas, 4:Haut
+    protected int y;
     protected Boolean vie;   // True = Vivant, False = Mort
 
     // Constructeur 1 : Création (Début du jeu)
-    public Personne(String nom, int x, int y) {
+    public Personne(String nom) {
         this.nom = nom;
-        this.x = x;
-        this.y = y;
+        x = 0;
+        y = 0;
         this.vie = true;
-        this.direction = 3; // Par défaut regarde vers le bas
     }
-
-    // Constructeur 2 : COPIE (Pour le changement de classe)
-    // public Personne(Personne p) {
-    //     this.nom = p.nom;
-    //     this.x = p.x;
-    //     this.y = p.y;
-    //     this.vie = p.vie;
-    //     this.direction = p.direction;
-    // }
 
     // MÉTHODE DE DÉPLACEMENT
     // 1: Gauche | 2: Droite | 3: Bas | 4: Haut
-    public void seDeplacer(int choixDirection) {
-        this.direction = choixDirection; // On mémorise la direction
+    public void seDeplacer(int choix) {
 
         if (choixDirection == 1) {      // GAUCHE
             this.x = this.x - 1;
@@ -40,6 +28,7 @@ public abstract class Personne {
         
         System.out.println(this.nom + " se déplace vers " + getNomDirection(choixDirection) + " -> Case [" + x + "," + y + "]");
     }
+
 
     // Petit utilitaire pour afficher "Gauche" au lieu de "1"
     private String getNomDirection(int d) {
