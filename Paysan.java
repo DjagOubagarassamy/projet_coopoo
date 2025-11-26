@@ -5,6 +5,6 @@ public class Paysan extends Personne {
 
     @Override
     public void attaquer() {
-        System.out.println("Le Paysan donne un coup de fourche (Dégâts faibles).");
+        System.out.println(getNom() + "n'a pas d'arme.");
     }
 }
