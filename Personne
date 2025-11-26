@@ -2,7 +2,7 @@ public abstract class Personne {
     protected String nom;
     protected int x; 
     protected int y; 
-    protected int direction; // 1:Gauche, 2:Droite, 3:Bas, 4:Haut
+    //protected int direction; // 1:Gauche, 2:Droite, 3:Bas, 4:Haut
     protected Boolean vie;   // True = Vivant, False = Mort
 
     // Constructeur 1 : Création (Début du jeu)
