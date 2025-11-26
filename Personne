@@ -38,8 +38,7 @@ public abstract class Personne {
         } else if (choix == 4) { // HAUT
             this.y = this.y - 1;
         }
-        System.out.println(this.nom + " se déplace vers " + getNomDirection(choixDirection) + " -> Case [" + x + "," + y + "]");
+        System.out.println(this.nom + " se déplace vers " + " -> Case [" + x + "," + y + "]");
     }
-
     public abstract void attaquer(); 
 }
